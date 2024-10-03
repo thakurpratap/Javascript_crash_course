@@ -172,3 +172,11 @@ console.log(squae(6));
 
 
 
+let data = "";
+const fruits = ["apple", "orange", "cherry"];
+
+fruits.forEach(function (items) {
+  data += index + ":" + items + "<br/>" ;
+})
+console.log(data, ">>>>>>>>>>>>>>>>")
+
