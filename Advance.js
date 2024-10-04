@@ -186,3 +186,23 @@ Promise.any([promise1, promise2]).then(result => {
 }).catch(error => {
     console.log(error);  // Logs if all promises are rejected
 });
+
+
+// callback function
+
+function name(name, callback){
+    console.log(name);
+
+    callback(name)
+}
+
+
+function surname(name){
+    console.log(name + 'Thakur')
+}
+
+
+name('pratap', surname)
+
+
+ 

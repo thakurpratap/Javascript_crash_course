@@ -26,19 +26,19 @@ if(x>5 || y>10){
 }
 
 // if x>y ?then it is read color otherwise blue
-const a = 10;
+// const a = 10;
 const color = x > y ? 'red' : 'blue';
 console.log(color)
 
 
 // in switch case it check the condition is true then it execute the code and break itb mean i canot below if the condition true stop the execute
-
-switch (color) {
+const colors = 'red'
+switch (colors) {
     case 'red':
         console.log('color is red')
         break;
         case 'blue':
-            console.log('color is red')
+            console.log('color is blue')
             break;
     default:
         break;

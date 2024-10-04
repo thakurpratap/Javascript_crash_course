@@ -24,8 +24,8 @@ const lastname = "thakur"
 // 1. Globle scope ={globle variable means we can use the variable inside the function and outside the function we can accessible }
 // Variables declared Globally (outside any function) have Global Scope. Global variables can be accessed from anywhere in a application.
 
-   var a = "globle_scope"
-   //  let a = "globle_scope"
+   // var a = "globle_scope"
+    let a = "globle_scope"
    //   const a = "globle_scope"
    const Globle = () =>{
      var a = "block_scope"
@@ -38,23 +38,51 @@ const lastname = "thakur"
    // Variables defined inside a function are not accessible (visible) from outside the function.
 
    const Functionscope = () =>{
-    // let b = 'Functionscope'
-    const b = 'Functionscope'
+      var b = "Functionscope"
+   //  let b = 'Functionscope'
+   //  const b = 'Functionscope'
     console.log(b)
    }
-//    console.log(b)   (its not posible)
+   // console.log(b)   //  (its not posible) reference error
    Functionscope();
+
+
+
+   const functionScopeExample = () => {
+      var b = "function scope";
+      if (true) {
+          var b = "still function scope";
+          console.log(b);  // "still function scope"
+      }
+      console.log(b);  // "still function scope" (same `b` as above)
+  }
+  functionScopeExample();
+  
+
+
 
    // 3. Block scope = {block scope and function scope both are similar}
 
+
+   const blockScopeExample = () => {
+      if (true) {
+          var c = "block scope";  // let and const conot use
+          console.log(c); // "block scope"
+      }
+      console.log(c); // ReferenceError: c is not defined (because `let` is block-scoped)
+  }
+  blockScopeExample();
+  
+
    const blockscope = () =>{
-     // let b = 'Functionscope'
-     const c = 'Functionscope'
+      var c = 'blockscope'
+   //   let c = 'blockscope'
+   //   const c = 'blockscope'
      console.log(c)
    }
-   //    console.log(c)   (its not posible)
-   blockscope();
-
+      // console.log(c)   //(its not posible)
+      blockscope();
+ 
 
 
 // hoisting
@@ -72,7 +100,7 @@ var home = "good"
 // moving all declarations to the top of the current scope (declaration hoised to the top. but initialization is not)
 //  access before declaration is call hoisting (variable can be used before it has been declared.)
 
-x = 5; //assign
+x = 5; //assign 
 console.log(x, "aasvvava");
 var x   //declaration
 
